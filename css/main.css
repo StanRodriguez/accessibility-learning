@@ -1,0 +1,31 @@
+.child{
+			border: 1px solid;
+			padding: 1em;
+
+			background-color: red;
+		}
+
+		.wrapper{
+			display: grid;
+			grid-template-columns: repeat(3,1fr);/*create three columns of 1fr each*/
+			grid-template-rows: repeat(4,200px);/*create four rows of 1fr each*/
+			grid-gap: 10px 5px;
+			grid-template-areas: 
+			"header header header"
+			"nav blog blog"
+			"nav blog blog"
+			"footer footer footer"
+		}
+		.wrapper>.header{
+			grid-area: header;
+		}
+		.wrapper>.nav{
+			grid-area: nav;
+		}
+		.wrapper>.blog{
+			grid-area: blog;
+		}
+
+		.wrapper>.footer{
+			grid-area: footer;
+		}
